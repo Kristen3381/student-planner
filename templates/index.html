@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Student Flow</title>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md p-6">
+        <h1 class="text-2xl font-bold text-blue-600 mb-4">My Daily Flow</h1>
+        
+       <div class="space-y-4">
+    <input id="taskName" type="text" placeholder="Activity Name (e.g., Math Class)" class="w-full border p-2 rounded">
+    <input id="taskTime" type="time" class="w-full border p-2 rounded">
+    
+    <select id="taskType" class="w-full border p-2 rounded">
+        <option value="fixed">Fixed (School Class)</option>
+        <option value="flexible">Flexible (Fun/Study)</option>
+    </select>
+
+    <button onclick="sendTaskToServer()" class="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 font-bold">
+        Add to Schedule
+    </button>
+    <button onclick="loadSchedule()" class="w-full mt-4 bg-green-500 text-white py-2 rounded hover:bg-green-600 font-bold">
+    Generate Smart Schedule
+</button>
+
+<div id="displayArea" class="mt-8 space-y-4">
+    </div>
+</div>
+
+        <ul id="scheduleList" class="mt-6 space-y-2">
+            </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
