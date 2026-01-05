@@ -1,12 +1,12 @@
 async function sendTaskToServer() {
-    // Get values from the UI
+    // Gets values from the User Interphase
     const name = document.getElementById('taskName').value;
     const time = document.getElementById('taskTime').value;
     const type = document.getElementById('taskType').value;
 
     const taskData = { name, time, type };
 
-    // Send to Python
+    // Sends the values to python(Backend)
     const response = await fetch('/save-task', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
